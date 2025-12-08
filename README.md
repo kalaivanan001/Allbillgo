@@ -7,4 +7,4 @@ This website for Billing Software
 ![Home Icon](https://raw.githubusercontent.com/kalaivanan001/Allbillgo/main/img/home-icon.jpg)
 ![Mobile Background](https://raw.githubusercontent.com/kalaivanan001/Allbillgo/main/img/mobile-bg.png)
 ![Mobile Dashboard](https://raw.githubusercontent.com/kalaivanan001/Allbillgo/main/img/mobile-dashboard.jpeg)
-![POS Image](https://raw.githubusercontent.com/kalaivanan001/Allbillgo/main/img/pos20%image.jpeg)
+![POS Image](https://raw.githubusercontent.com/kalaivanan001/Allbillgo/main/img/pos-image.jpeg)

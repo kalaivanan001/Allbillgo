@@ -1,0 +1,1472 @@
+/* --- Global Styles and Keyframes (Unchanged) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    line-height: 1.6;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.section-heading h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.btn-primary {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #15c84d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #81ca23;
+}
+/* Utility for centering containers */
+.hero-container, .about-container, .contact-container, .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- ANIMATION KEYFRAMES (Unchanged) --- */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animated-left { animation: slideInLeft 1s ease-out forwards; }
+.animated-right { animation: slideInRight 1s ease-out forwards; animation-delay: 0.3s; }
+.animated-zoom-in { animation: zoomIn 1s ease-out forwards; }
+.animated-fade-in { animation: zoomIn 1s ease-out forwards; animation-delay: 0.4s; }
+.animated-up { animation: slideInUp 0.8s ease-out forwards; }
+/* Initial hidden state */
+.animated-left, .animated-right, .animated-zoom-in, .animated-fade-in, .animated-up { opacity: 0; }
+
+/* --- 1. NAVIGATION BAR STYLES (Unchanged) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo img {
+    height: 40px;
+    
+}
+.nav-links a {
+    margin: 0 15px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #007bff;
+}
+.nav-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+    font-weight: bold;
+    color: #007bff;
+}
+.search-btn {
+    color: #555 !important;
+}
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    font-size: 1.5rem;
+}
+
+
+/* --- Responsive Adjustments (for smaller screens) --- */
+@media (max-width: 900px) {
+    .nav-links, .nav-actions {
+        display: none; /* Hide nav links and actions on mobile */
+    }
+    .menu-toggle {
+        display: block; /* Show hamburger menu button */
+        background: none;
+        font-size: 1.5em;
+        color: #333;
+        padding: 5px 10px;
+    }
+    .navbar {
+        padding: 10px 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* 1. Navbar Mobile Adjustments */
+    .navbar {
+        padding: 10px 20px;
+    }
+    .nav-links, .nav-actions {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+        padding: 10px;
+        z-index: 999;
+    }
+    .nav-links.active, .nav-actions.active {
+        display: flex; /* Show when active */
+    }
+    .nav-links a, .nav-actions button {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+    }
+    .menu-toggle {
+        display: block; /* Show menu icon */
+    }
+    .nav-actions {
+        order: 3;
+        top: 280px; /* Position below the nav-links */
+        padding-bottom: 20px;
+    }
+
+    /* Animation adjustments for Mobile */
+    .animated-left, .animated-right, .animated-zoom-in, .animated-fade-in, .animated-up {
+        animation: none; /* Disable complex animations for performance */
+        opacity: 1;
+        transform: none;
+    }
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+    .about-content h3 {
+        font-size: 1.5rem;
+    }
+    /* Stats counter mobile adjustment */
+    .stats-counter-container {
+        flex-direction: column; /* Stack counters vertically */
+    }
+    .stat-box {
+        flex-basis: auto; /* Remove minimum width */
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+    }
+    .stat-box:last-child {
+        border-bottom: none;
+    }
+}
+
+
+
+/* --- HERO SECTION STYLES (Placeholder) --- */
+.hero-section {
+    background-color: #f7f9fc;
+    padding: 80px 20px;
+    overflow: hidden; 
+}
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.hero-content { flex: 1; }
+.hero-image { flex: 1; margin-left: 40px; width: 100%; }
+.hero-content h1 { font-size: 2.8rem; color: #007bff; margin-bottom: 20px; }
+.hero-image img { border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); }
+
+/* --- SERVICES SECTION (Placeholder Styles) --- */
+.services-placeholder {
+    padding: 50px 20px;
+    background-color: white;
+}
+
+/* --- 2. ABOUT SECTION STYLES --- */
+.about-section {
+    padding: 80px 20px;
+    background-color: white;
+}
+.about-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px; /* Space before counters */
+}
+.about-image {
+    flex: 1;
+}
+.about-image img {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.about-content {
+    flex: 1;
+}
+.about-content h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+.about-content p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* NEW: Stats Counter Styles */
+.stats-counter-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: #f0f7ff; /* Light blue background for emphasis */
+    border-radius: 12px;
+}
+.stat-box {
+    text-align: center;
+    flex-basis: 200px; /* Minimum width for each box */
+}
+.stat-box i {
+    font-size: 2.5rem;
+    color: #ff0084;
+    margin-bottom: 10px;
+}
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2400b3;
+    margin-bottom: 5px;
+}
+.stat-box h4 {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+
+/* --- 3. CONTACT SECTION STYLES (Unchanged) --- */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #f7f9fc;
+}
+.contact-container {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+.contact-form, .contact-info {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-info h3 {
+    color: #007bff;
+    margin-bottom: 25px;
+}
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+.contact-info i {
+    margin-right: 10px;
+    color: #007bff;
+}
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #555;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* --- 4. FOOTER DETAILS STYLES (Unchanged) --- */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 60px 20px 20px;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 30px;
+}
+.footer-col {
+    flex: 1;
+}
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+.footer-col p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+.footer-col a {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+.footer-col a:hover {
+    color: #fff;
+}
+.footer-col input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+.btn-subscribe {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #aaa;
+}
+
+
+/* --- MOBILE RESPONSIVENESS (Media Queries) --- */
+@media (max-width: 992px) {
+    /* General Layout Stacking */
+    .hero-container, .about-container, .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content { order: 2; }
+    .hero-image { order: 1; margin-bottom: 30px; }
+    
+    /* Contact and Footer Stacking */
+    .contact-container {
+        flex-direction: column;
+    }
+    .footer-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .footer-col {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* --- MODAL (POPUP) STYLES --- */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2000; /* Sit on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with opacity */
+    
+    /* Animation Properties */
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.show {
+    display: flex; /* Show the overlay */
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* Fade in */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+    /* Start position for bounce effect */
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.show .modal-content {
+    transform: translateY(0); /* Bounce to center */
+}
+
+.close-btn {
+    color: #acc9eb;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: color 0.2s;
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: #e7161d;
+    text-decoration: none;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.modal-header h3 {
+    color: #007bff;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+.modal-body {
+    text-align: center;
+}
+.contact-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745; /* Success green */
+    margin: 15px 0;
+}
+.contact-number i {
+    margin-right: 10px;
+}
+.small-print {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.btn-call {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-call:hover {
+    background-color: #1e7e34;
+}
+
+/* --- Mobile Adjustment --- */
+@media (max-width: 480px) {
+    .contact-number {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* --- Core Feature Section Styles (same as before) --- */
+.feature-section {
+    background-color: white;
+    padding: 80px 20px;
+    overflow: hidden; /* Hide overflow from zoom animation */
+}
+.feature-container {
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    gap: 60px;
+}
+.feature-content, .feature-image {
+    flex: 1; 
+}
+.feature-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+}
+.feature-content h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+.feature-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.feature-content li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- Apply Animations --- */
+.animated-zoom-in {
+    animation: zoomIn 1s ease-out forwards;
+}
+
+.animated-fade-in {
+    animation: fadeInText 1s ease-out forwards;
+    animation-delay: 0.4s; /* Delay text after image */
+}
+
+/* --- Mobile Responsiveness (same as before) --- */
+@media (max-width: 768px) {
+    .feature-container {
+        flex-direction: column;
+    }
+    .feature-content h2 {
+        text-align: center;
+    }
+    /* Disable/adjust animations for mobile */
+    .animated-zoom-in, .animated-fade-in {
+        animation: fadeIn 0.8s ease-out forwards; /* Simpler fade-in for mobile */
+        transform: none; /* Remove scale from mobile */
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
+
+/* --- 1. LAYOUT STYLES (70/30 Split) --- */
+.mobile-section {
+    background-color: #e6f0ff; /* Light blue background */
+    padding: 80px 20px;
+    overflow-x: hidden; /* ⭐ FIX: Prevents horizontal scrollbar during animation */
+}
+.mobile-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.mobile-content {
+    flex: 7; /* Takes 70% of the space */
+}
+.mobile-image {
+    flex: 3; /* Takes 30% of the space */
+    text-align: center;
+}
+.mobile-image img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.mobile-content h2 {
+    color: #0056b3;
+    font-size: 2.2rem;
+}
+.app-store-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.app-store-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- 2. ANIMATION KEYFRAMES --- */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px); /* Starts far off-screen */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px); /* Starts far off-screen */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- 3. APPLY ANIMATIONS & INITIAL STATE --- */
+
+/* ⭐ CRUCIAL: Set the initial state for animation classes */
+.animated-left, .animated-right {
+    opacity: 0; 
+}
+
+/* Apply specific animation for the content (Left) */
+.animated-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Apply specific animation for the image (Right) with a slight delay */
+.animated-right {
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.3s; 
+}
+
+
+/* --- 4. MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .mobile-container {
+        flex-direction: column; /* Stacks the columns */
+        text-align: center;
+    }
+    .mobile-content {
+        order: 2; /* Content below image on mobile is often preferred */
+    }
+    .mobile-image {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    
+    /* ⭐ Mobile Fix: Disable complex sliding animations for performance/visual clarity */
+    .animated-left, .animated-right {
+        animation: fadeIn 0.8s ease-out forwards;
+        transform: none; /* Reset sliding transform */
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
+/*cards for service*/
+/* --- SERVICES SECTION STYLES --- */
+.services-section {
+    padding: 80px 20px;
+    background-color: #f7f9fc; /* Light background to contrast with cards */
+}
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cards-grid {
+    display: flex;
+    gap: 30px; /* Space between cards */
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    padding: 10px;
+    background-color: white;
+}
+.service-card {
+    flex: 1; /* Allows the cards to share space equally */
+    min-width: 300px; /* Minimum width before stacking */
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Visual Interest */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* --- AOS STAGGERING FOR CARDS --- */
+/* We already have .animated-up defined, we just need to stagger the delay */
+.service-card:nth-child(2).visible { animation-delay: 0.2s; }
+.service-card:nth-child(3).visible { animation-delay: 0.4s; }
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    .cards-grid {
+        /* When there's less space, stack two columns */
+        justify-content: center;
+        gap: 20px;
+    }
+    .service-card {
+        flex: 0 0 calc(50% - 10px); /* Two cards per row with a gap */
+        min-width: unset;
+    }
+}
+@media (max-width: 600px) {
+    .cards-grid {
+        flex-direction: column; /* Single column on very small screens */
+        gap: 20px;
+    }
+    .service-card {
+        flex: 1;
+    }
+}
+
+/* --- Global Styles & Layout --- */
+
+
+.card-container {
+    /* Use grid for better control over wide items */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two wide cards per row */
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    /* --- NEW: Wide and Short Dimensions --- */
+    width: 100%; /* Takes full width of the grid column */
+    padding: 20px 30px;
+    height: 140px; /* Shorter fixed height */
+
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* --- Layout to make content horizontal --- */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    
+    /* Ensure smooth transitions for transform properties */
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d; /* Required for 3D rotation */
+
+    /* Initial state for all animations */
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation-fill-mode: forwards;
+}
+
+/* --- NEW: Rotation Animation on Hover --- */
+.card:hover {
+    /* Rotate the card slightly on the Y-axis (3D effect) */
+    transform: rotateY(5deg) scale(1.01) translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+    color: #fff;
+}
+
+/* --- Content Layout for Wide Card --- */
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    min-width: 50px; /* Prevent shrinking */
+    font-size: 1.6em;
+    margin-right: 20px;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #f0f0f0; 
+    line-height: 1.4;
+    display: flex; /* Display list items inline */
+    gap: 15px; /* Space between list items */
+    font-size: 0.9em;
+}
+
+.card ul li {
+    margin-bottom: 0;
+    padding-left: 15px;
+    position: relative;
+    flex-basis: 50%; /* Make list items take about half the space */
+}
+/* Ensure the checkmark is still styled */
+.card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #fff; 
+    font-weight: bold;
+}
+
+/* --- Card Colors (Primary/Background) --- */
+.blue { background-color: #3b82f6; }
+.green { background-color: #10b981; }
+.orange { background-color: #f97316; }
+.purple { background-color: #8b5cf6; } 
+.teal { background-color: #14b8a6; } 
+.red { background-color: #ef4444; } 
+
+/* --- Card Colors (Icon Circle - Slightly Darker Accent) --- */
+.blue .icon-circle { background-color: #1d4ed8; }
+.green .icon-circle { background-color: #059669; }
+.orange .icon-circle { background-color: #ea580c; }
+.purple .icon-circle { background-color: #7c3aed; }
+.teal .icon-circle { background-color: #0d9488; }
+.red .icon-circle { background-color: #dc2626; }
+
+
+/* --- Keyframe Animations (Retained) --- */
+/* ... (Keep all your existing @keyframes and their corresponding classes (slide-in, pulse, fade-up, wiggle, floating, spin) here) ... */
+/* For brevity, I am not repeating the keyframes in this response, but they should be in your styles.css */
+
+
+/* --- RESPONSIVE ADJUSTMENT --- */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+    .card ul {
+        flex-direction: column; /* Stack list items vertically on mobile */
+    }
+}
+
+/*Key Fetuers
+/* --- Global Styles & Layout --- */
+#features{
+    background-color: #585656;
+}
+#features h1 {
+    padding: 70px;
+    margin: auto;
+    color: white;
+}
+.card-container {
+    /* Use CSS Grid to display 2 cards per row on large screens */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.card {
+    /* --- Wide and Short Dimensions --- */
+    width: 100%; 
+    padding: 20px 30px;
+    height: 140px; 
+    
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* --- Content Alignment --- */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    
+    /* --- Hover Rotation Preparation --- */
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
+    
+    /* Ensure visibility (no animation delay) */
+    opacity: 1; 
+    transform: none;
+}
+
+/* --- Hover Rotation Effect --- */
+.card:hover {
+    /* Slightly rotate the card for a dynamic 3D effect */
+    transform: rotateY(5deg) scale(1.01) translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Content Layout --- */
+.card-content {
+    flex-grow: 1; /* Allows content area to take up remaining space */
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    min-width: 50px; 
+    font-size: 1.6em;
+    margin-right: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.3em;
+    color: #fff;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #f0f0f0; 
+    line-height: 1.4;
+    display: flex; /* Display list items horizontally */
+    gap: 15px; 
+    font-size: 0.9em;
+}
+
+.card ul li {
+    padding-left: 15px;
+    position: relative;
+    flex-basis: 50%; /* Each list item takes half the available width */
+}
+
+.card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #fff; 
+    font-weight: bold;
+}
+
+/* --- Card Colors (Background) --- */
+.blue { background-color: #3b82f6; }
+.green { background-color: #10b981; }
+.orange { background-color: #f97316; }
+.purple { background-color: #8b5cf6; } 
+.teal { background-color: #14b8a6; } 
+.red { background-color: #ef4444; } 
+
+/* --- Card Colors (Icon Circle Accent) --- */
+.blue .icon-circle { background-color: #1d4ed8; }
+.green .icon-circle { background-color: #059669; }
+.orange .icon-circle { background-color: #ea580c; }
+.purple .icon-circle { background-color: #7c3aed; }
+.teal .icon-circle { background-color: #0d9488; }
+.red .icon-circle { background-color: #dc2626; }
+
+
+/* --- Responsive Adjustments (for smaller screens) --- */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Single column on phones/tablets */
+    }
+    .card ul {
+        flex-direction: column; /* Stack list items vertically */
+    }
+    .card {
+        height: auto; /* Allow height to adjust based on stacked content */
+    }
+}
+
+
+/* --- SOCIAL MEDIA BUTTON STYLES (Always Colored) --- */
+
+.social-icons {
+    margin-top: 60px;
+    display: flex; /* Ensure icons are flexible */
+    gap: 15px; /* Spacing between icons */
+    justify-content: center; /* Center them if the parent container allows it */
+}
+
+.social-icons a {
+    /* Base Link Style */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 50%; /* Makes them circular buttons */
+    color: white; /* Icon color is always white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 25px;
+}
+
+/* 1. Brand Colors (Applied Directly to the Background) */
+.social-icons a.facebook-icon {
+    background-color: #3b5998; /* Facebook Blue */
+    
+}
+.social-icons a.twitter-icon {
+    background-color: #1da1f2; /* Twitter Blue */
+}
+.social-icons a.linkedin-icon {
+    background-color: #0077b5; /* LinkedIn Blue */
+}
+.social-icons a.instagram-icon {
+    /* Use a strong shade for the background */
+    background-color: #c13584;
+    align-items: center; 
+}
+.social-icons a.youtube-icon {
+    background-color: #ff0000; /* YouTube Red */
+}
+
+/* 2. Hover Effect */
+.social-icons a:hover {
+    transform: translateY(-2px) scale(1.05); /* Slight lift and scale */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+/* --- STICKY BUTTON STYLES --- */
+.sticky-btn {
+    /* Fixed Positioning */
+    position: fixed;
+    bottom: 30px; /* Distance from bottom */
+    right: 30px; /* Distance from right */
+    
+    /* Appearance */
+    background-color: #ffc107; /* Eye-catching secondary color (yellow/amber) */
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1050; /* Ensure it's above everything else */
+    
+    /* Icon Styling */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    /* Animation Control (Hidden by Default) */
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* State when the button is visible (triggered by JS) */
+.sticky-btn.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* State when the button is hidden (default) */
+.sticky-btn.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevents button from being clicked when invisible */
+}
+
+/* Hover Effect */
+.sticky-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Mobile Adjustments (make button smaller on phones) */
+@media (max-width: 600px) {
+    .sticky-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+/*MObile App action*/
+
+
+/* --- LAYOUT 1: SPLIT SCREEN FOCUS STYLES --- */
+.mobile-section {
+    background-color: #e6f0ff; 
+    padding: 100px 0px;
+    overflow-x: hidden; 
+}
+.mobile-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.mobile-content {
+    flex: 7;
+    padding-left: 20px; /* Space from the image */
+}
+.mobile-image-perspective {
+    flex: 3; 
+    text-align: center;
+    /* 3D Perspective for the container */
+    perspective: 1000px; 
+}
+
+.mobile-image-perspective2 {
+    flex: 2; 
+    text-align: center;
+    /* 3D Perspective for the container */
+    perspective: 1000px; 
+}
+.mobile-mockup-3d {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 30px; /* Modern phone border */
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    /* Transition for the 3D tilt effect */
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease; 
+    transform-style: preserve-3d;
+}
+/* Advanced Animation: 3D Tilt on Hover */
+.mobile-mockup-3d:hover {
+    transform: rotateY(5deg) rotateX(2deg) scale(1.02);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+}
+.feature-point {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+.feature-point i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* --- AOS KEYFRAMES FOR ADVANCED ANIMATION --- */
+/* Simple Slide Left */
+@keyframes slideLeft {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+/* Fade In Up (used for the image) */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- AOS TRIGGERING CLASSES (for JavaScript) --- */
+.aos-slide-left { opacity: 0; }
+.aos-fade-in-up { opacity: 0; }
+
+.aos-slide-left.observed { animation: slideLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.aos-fade-in-up.observed { animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+
+/* --- Media Query for Mobile --- */
+@media (max-width: 768px) {
+    .mobile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mobile-content {
+        order: 2;
+        padding-left: 0;
+    }
+    .mobile-image-perspective {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    /* Disable 3D tilt on small screens */
+    .mobile-mockup-3d:hover {
+        transform: none; 
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    }
+    /* Mobile AOS fix */
+    .aos-slide-left.observed, .aos-fade-in-up.observed {
+        animation: fadeInUp 1s ease-out forwards !important;
+    }
+}
+
+
+/* --- LAYOUT 2: CAROUSEL STYLES --- */
+.mobile-carousel-container {
+    max-width: 350px; /* Width of the phone mockup */
+    margin: 0 auto;
+    overflow: hidden; /* Crucial: Hides screens outside the viewport */
+    border-radius: 40px; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 8px solid #333; /* Phone bezel effect */
+}
+.carousel-track {
+    display: flex;
+    width: 300%; /* If 3 screens, total width is 300% of container */
+    transition: transform 0.6s ease-in-out; /* Smooth transition */
+}
+.carousel-screen {
+    width: calc(100% / 3); /* Each screen takes up 1/3 of the track width */
+    height: auto;
+}
+
+/* --- Showcase Container Styling --- */
+.mobile-showcase-center {
+    position: relative;
+    max-width: 800px;
+    height: 600px; /* Define a fixed height for the container to position cards */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Central Phone Mockup --- */
+.main-mockup-frame {
+    position: relative;
+    z-index: 10; /* Keep phone above the cards */
+    max-width: 350px;
+    border-radius: 40px; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 8px solid #333; 
+}
+.mobile-mockup-center {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+}
+
+/* --- Floating Card Styling --- */
+.feature-card-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.floating-card1 {
+    position: absolute;
+    width: 150px;
+    padding: 15px;
+    background-color: rgb(179, 40, 189);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 5;
+    color: white;
+    
+    /* Apply the continuous floating animation */
+    animation: floating-animation 4s ease-in-out infinite alternate;
+}
+.floating-card2 {
+    position: absolute;
+    width: 150px;
+    padding: 15px;
+    background-color: rgb(57, 189, 40);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 5;
+    color: white;
+    
+    /* Apply the continuous floating animation */
+    animation: floating-animation 4s ease-in-out infinite alternate;
+}
+.floating-card3 {
+    position: absolute;
+    width: 150px;
+    padding: 15px;
+    background-color: rgb(189, 87, 40);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 5;
+    color: white;
+    
+    /* Apply the continuous floating animation */
+    animation: floating-animation 4s ease-in-out infinite alternate;
+}
+.floating-card4 {
+    position: relative;
+    width: 150px;
+    padding: 15px;
+    background-color: rgb(27, 113, 194);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 5;
+    color: white;
+    
+    /* Apply the continuous floating animation */
+    animation: floating-animation 4s ease-in-out infinite alternate;
+}
+.floating-card i {
+    font-size: 1.5rem;
+    color: #eff4f8;
+    margin-bottom: 5px;
+}
+.floating-card h4 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #fffcfc;
+}
+
+/* --- 1. Keyframes for Continuous Floating Movement --- */
+@keyframes floating-animation {
+    0% {
+        transform: translateY(0px) rotate(1deg);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        transform: translateY(-10px) rotate(-1deg);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* --- 2. Positioning the Cards around the phone --- */
+/* Top-Left Card */
+.pos-top-left {
+    top: 50px;
+    left: 10%;
+    animation-delay: 0.5s; /* Stagger the animation start */
+}
+
+/* Top-Right Card */
+.pos-top-right {
+    top: 20px;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+/* Bottom-Left Card */
+.pos-bottom-left {
+    bottom: 100px;
+    left: 5%;
+    animation-delay: 1s;
+}
+/* Bottom-right Card */
+.pos-bottom-right {
+    bottom: 100px;
+    left: 5%;
+    animation-delay: 1s;
+}
+
+/* --- Mobile Responsiveness (Adjusting positioning) --- */
+@media (max-width: 768px) {
+    .mobile-showcase-center {
+        height: 500px; /* Reduce height on mobile */
+    }
+    .main-mockup-frame {
+        max-width: 250px; /* Reduce phone size */
+    }
+    
+    /* Make the floating cards smaller and position them closer */
+    .floating-card {
+        width: 120px;
+        padding: 10px;
+        animation: none; /* Disable complex floating animation on mobile */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .pos-top-left {
+        top: 20px;
+        left: 5%;
+       
+    }
+    .pos-top-right {
+        top: 15%;
+        right: 5%;
+    }
+    .pos-bottom-left {
+        bottom: 50px;
+        left: 10%;
+    }
+}
+
+
+#mobile-gallery{
+     background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)), url(img/mobile-bg.png);
+      background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+
+

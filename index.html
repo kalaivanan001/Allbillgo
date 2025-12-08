@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allbillgo</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Software Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<!--Navbar-->
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/companylogo.jpeg" alt="Company Logo" style="height: 40px;">
+            
+        </div>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a> 
+            <a href="#features">Features</a> 
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="sign-btn"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+        </div>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+<!--Home Page -->
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content animated-left">
+                    <h1 style="color:rgb(255, 64, 0);">Accounts & Billing Softwares and Services for All type of Business.. </h1>
+                    <h1 style="font-size: medium;">Billing Software That Helps You **Grow, Not Just Manage**</h1>
+                    <p>From instant invoicing to automated payment tracking and comprehensive financial reporting, our solution simplifies your billing cycle and boosts your cash flow.</p>
+                    <button class="btn-primary" onclick="openModal()">Get a Free Demo</button>
+                    <div id="demoModal" class="modal-overlay">
+                        <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                     <div class="modal-header">
+                        <h3>Ready for a Free Demo?</h3>
+                        <p>Call us directly to schedule a personalized tour of our software:</p>
+                    </div>
+                    <div   div class="modal-body">
+                        <div class="contact-number animated-number">
+                        <i class="fas fa-phone-alt"></i> 
+                        +91 99420 14611
+                    </div>
+                    <p class="small-print">Available Mon - Fri, 9 AM to 6 PM IST.</p>
+                </div>
+                     <a href="tel:+18005551234" class="btn-call">
+                    <i class="fas fa-headset"></i> Call Now
+                    </a>
+                </div>
+            </div>
+
+                </div>
+                <div class="hero-image animated-right">
+                    <img src="img/pos image.jpeg" alt="Software Screenshot">
+                </div>
+            </div>
+
+<!--Contact Us Sticky Button-->
+            <a href="#contact" id="stickyContactBtn" class="sticky-btn hidden">
+                <i class="fas fa-headset"></i> Contact Us
+           </a>
+
+</section>
+
+
+<!--Home Second Page feature section-->
+        
+<section class="feature-section">
+    <div class="feature-container">
+        <div class="feature-image animated-zoom-in">
+            <img src="img/home-icon.jpg" alt="Animated GIF showing instant invoice generation.">
+        </div>
+        
+        <div class="feature-content animated-fade-in">
+            <h2>Invoice in Seconds.Get Paid Faster.</h2>
+            <h1 style="color: blue;">We offer billing software that is both offline (desktop-based) and cloud-based. (Direct & Informative)</h1>
+            <p>Our intelligent system minimizes data entry and automates repetitive tasks. Generate a professional, fully compliant invoice in three clicks, not thirty minutes.</p>
+            <ul>
+                <li>✅ **Full GST/Tax Compliance** built-in.</li>
+                <li>✅ **Integrated Payment Gateways** for immediate payments.</li>
+                <li>✅ **Real-time Status** tracking for every bill.</li>
+                <li>✅ **Ensure 100% compliance with built-in GST Invoicing. Generate accurate, legally compliant GST/Tax invoices, manage HSN/SAC codes, and easily create detailed reports for hassle-free tax filing.</li>
+                <li>✅ **Our software fully automates GST calculations and reporting, providing you with compliant invoices and all the necessary documentation to make tax season simple.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--Mobile Layout-->
+<section id="mobile-app-section" class="mobile-section">
+    <div class="mobile-container">
+        
+        <div style="width: 100%;" class="mobile-content animated-left"> 
+            <h2 style="color: rgb(255, 132, 0);">Your Office in Your Pocket. **Mobile Ready.**</h2>
+            <p>Don't be tethered to your desk. Our dedicated mobile app gives you full control over sales, inventory, and accounts from any device, anywhere in the world. Get real-time alerts on due payments.</p>
+            <p>Perfect for field sales teams and business owners who need to keep moving.</p>
+            
+            <ul>
+                <li>
+                    <h3 style="font-size: small;">Empower your sales team with our dedicated Mobile Order App. Allow field agents and staff to take orders, generate estimates, and process payments instantly from any smartphone or tablet.</h3>
+                </li>
+            </ul>
+                <li><h3 style="font-size: small;">Connect your front-end sales with back-end billing instantly; the Mobile Order App syncs all sales data in real-time, eliminating manual reconciliation and reducing order-to-invoice time to seconds.</h3></li>
+            <a href="#" class="app-store-btn">Download on the App Store</a>
+        </div>
+        
+        <div class="mobile-image animated-right">
+            <img 
+                src="img/gallery-1.jpeg" 
+                alt="Vertical screenshot of the billing software mobile app."
+            >
+        </div>
+
+      </div>
+      <section id="mobile-focus" class="mobile-section">
+    <div class="mobile-container">
+        
+        <div class="mobile-image-perspective aos-fade-in-up">
+            <img 
+                src="img/billing-app.png" 
+                alt="Main app dashboard"
+                class="mobile-mockup-3d"
+            >
+        </div>
+        
+        <div class="mobile-content aos-slide-left">
+            <h2>Real-Time Insights.</h2>
+            <p>Our dedicated mobile app isn't just a viewer—it's a fully functional tool for managing transactions, approving expenses, and handling payments while you're on the move.</p>
+            
+            <div class="feature-point">
+                <i class="fas fa-check-circle"></i> 
+                <strong>Instant Approvals:</strong> Authorize transactions with a single tap.
+            </div>
+            <div class="feature-point">
+                <i class="fas fa-chart-line"></i> 
+                <strong>Live Metrics:</strong> See cash flow and sales data updated every second.
+            </div>
+            <div class="feature-point">
+                <i class="fas fa-bell"></i> 
+                <strong>Payment Alerts:</strong> Get notified instantly when an invoice is due or paid.
+            </div>
+            
+            <a href="#" class="btn-primary" style="margin-top: 20px;">Get the App Today</a>
+        </div>
+    </div>
+</section>
+<section id="mobile-gallery" class="mobile-section" style="background-color: rgb(191, 204, 188);">
+    <div style="padding: 50px;" class="section-heading">
+        <h2 style="color: rgb(255, 255, 255);">See Our App In Action: Real-Time Mobility</h2>
+    </div>
+
+    <div class="mobile-showcase-center aos-fade-in-up">
+        
+        <div class="main-mockup-frame">
+            <img src="img/mobile-dashboard.jpeg" class="mobile-mockup-center" alt="App Dashboard Screen">
+        </div>
+
+        <div class="feature-card-wrapper">
+            
+            <div class="floating-card1 pos-top-left">
+                <i class="fas fa-bolt"></i> 
+                <h4>Quick Billing</h4>
+            </div>
+
+            <div class="floating-card2 pos-top-right">
+                <i class="fas fa-chart-bar"></i> 
+                <h4>Live Reports</h4>
+            </div>
+
+            <div class="floating-card3 pos-bottom-left">
+                <i class="fas fa-map-marker-alt"></i> 
+                <h4>GPS Tracking</h4>
+            </div>
+             <div class="floating-card4 pos-bottom-left">
+                <i class="fas fa-credit-card""></i> 
+                <h4>Easy Payment</h4>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+   
+    </section>
+        
+<!--Our Core Service-->        
+        <section id="services" class="services-placeholder" style=" margin-top: 20px;" >
+            <div class="section-heading">
+                <h2>Our Core Services & Solutions</h2>
+            </div>
+            <p style="text-align: center;">Transform your business operations and financial health with the all-in-one billing software that delivers speed, accuracy, and compliance.</p>
+            <p style="text-align: center; padding: 5px;">Our billing software transforms complexity into clarity, allowing you to create professional invoices, automate payment reminders, and securely accept online payments instantly. Stop wasting time on manual processes and gain complete financial control with real-time reporting, ensuring you get paid faster and maintain accurate records effortlessly.</p>
+            <p style="text-align: center; padding: 5px;">Stop losing time to complex paperwork. Our billing software is the modern solution for effortless financial management, featuring lightning-fast invoicing, robust GST compliance, and seamless integration with our dedicated mobile order application. It's built to simplify your workflow, maximize your profits, and ensure you always have a clear view of your business's financial standing.</p>
+        </section>
+
+
+     
+        
+        <div class="cards-grid">
+            
+            <div class="service-card animated-up">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Automated Invoicing</h3>
+                <p>Generate professional invoices instantly, schedule recurring bills, and eliminate manual data entry. Focus on cash flow, not paperwork.</p>
+                <a href="#" class="card-link">Learn More &rarr;</a>
+            </div>
+
+            <div class="service-card animated-up">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Tax & Compliance</h3>
+                <p>Stay ahead of regional tax laws and GST requirements. Our system automates calculation and reporting, ensuring audit-proof records.</p>
+                <a href="#" class="card-link">Learn More &rarr;</a>
+            </div>
+
+            <div class="service-card animated-up">
+                <i class="fas fa-credit-card"></i>
+                <h3>Integrated Payments</h3>
+                <p>Accept payments via credit card, bank transfer, and digital wallets directly through the invoice. Track status in real-time, reducing late payments.</p>
+                <a href="#" class="card-link">Learn More &rarr;</a>
+            </div>
+
+                        
+            </div>
+
+            <!--Software Using Bussines-->
+            <h1 style="text-align: center;padding: 10px;">Our Software Using Bussines</h1>
+
+            <div class="cards-grid" style="padding: 10px;">
+            
+            <div class="service-card animated-up" >
+               
+                <h3>📢 Agency/Textiles/Hardwares Software</h3>
+
+                <p>Our software seamlessly tracks billable hours, manages retainer agreements, and converts complex project estimates into clear, professional invoices with a single click. Handle multiple clients, recurring services, and track team utilization effortlessly, ensuring every minute of work translates directly to revenue.</p>
+                
+            </div>
+
+            <div class="service-card animated-up">
+                
+                <h3>🏪 Supermarket & Retail Billing</h3>
+                <p>Our software provides a lightning-fast Point-of-Sale (POS) experience to minimize queues and maximize customer satisfaction. Effortlessly manage thousands of SKUs, track real-time inventory levels, handle discounts and promotions, and generate daily sales reports across all your retail outlets.</p>
+                
+            </div>
+
+            <div class="service-card animated-up">
+              
+                <h3>🏨 Hotel & Hospitality Billing</h3>
+                <h5>Integrated Billing for Seamless Guest Experiences.
+                    Simplify Room, Service, and Restaurant Charges.</h5>
+                <p>From check-in to check-out, our system tracks all guest charges—room tariffs, restaurant dining, laundry, and amenities—onto a single folio. Ensure accuracy with integrated POS for restaurants and bars, manage package deals, and generate comprehensive end-of-day reports effortlessly.</p>
+                
+            </div>
+                      
+            </div>
+    </div>
+</section>
+<!--Key Features-->
+
+<section id="features">
+    <h1 style="text-align: center; font-weight: bold;">Keyfeatures & Benifits </h1>
+    <div class="card-container">
+        
+        <div class="card blue">
+            <div class="icon-circle"><i class="fas fa-bolt"></i></div>
+            <div class="card-content"> 
+                <h3>Quick & Effortless Billing</h3>
+                <ul>
+                    <li>Create and dispatch professional bills in under 5 seconds.</li>
+                    <li>Minimize customer wait times and accelerate your checkout process.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card green">
+            <div class="icon-circle"><i class="fas fa-file-invoice-dollar"></i></div>
+            <div class="card-content">
+                <h3>Automated GST Compliance</h3>
+                <ul>
+                    <li>Generate 100% accurate, legally compliant GST/Tax invoices instantly.</li>
+                    <li>Effortlessly manage HSN/SAC codes and simplify your tax filing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card orange">
+            <div class="icon-circle"><i class="fas fa-boxes"></i></div>
+            <div class="card-content">
+                <h3>Smart Inventory Management</h3>
+                <ul>
+                    <li>Track stock levels in real-time and set automatic low-stock alerts.</li>
+                    <li>Optimize purchasing decisions and prevent costly stockouts.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card purple">
+            <div class="icon-circle"><i class="fas fa-credit-card"></i></div>
+            <div class="card-content">
+                <h3>Flexible Payment Acceptance</h3>
+                <ul>
+                    <li>Accept all major methods: cash, card, UPI, net banking, and digital wallets.</li>
+                    <li>Seamless integration ensures instant settlement and simplified reconciliation.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card teal">
+            <div class="icon-circle"><i class="fas fa-desktop"></i></div>
+            <div class="card-content">
+                <h3>Access Anywhere, Anytime</h3>
+                <ul>
+                    <li>Use the software seamlessly on desktop, tablet, or our mobile ordering app.</li>
+                    <li>All data syncs across devices instantly, keeping your business connected 24/7.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card red">
+            <div class="icon-circle"><i class="fas fa-chart-line"></i></div>
+            <div class="card-content">
+                <h3>Actionable Reports & Insights</h3>
+                <ul>
+                    <li>Get clear, visual dashboards of sales, profit, and customer trends.</li>
+                    <li>Transform raw data into intelligent insights for smarter strategic decisions.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--About Section-->
+
+        <section id="about" class="about-section">
+            <div class="section-heading">
+                <h2>Our Story & Vision</h2>
+            </div>
+            <div class="about-container">
+                <div class="about-image animated-zoom-in">
+                    <img src="img/customersupport.JPG" alt="Team working">
+                </div>
+                <div class="about-content animated-fade-in">
+                    <h3>Empowering Businesses Since 2006</h3>
+                    <p>We started with a simple goal: to eliminate the paperwork headaches that slow down small businesses. Today, our software is trusted by thousands of companies to manage their entire financial lifecycle, from first invoice to final payment. We believe that effortless billing is the foundation of successful growth.</p>
+                    <p>Our vision is to continue innovating, using AI and machine learning to predict cash flow and automate complex compliance requirements.</p>
+                    <a href="#team" class="btn-primary">Meet Our Team</a>
+                </div>
+            </div>
+            
+            <div class="stats-counter-container">
+                <div class="stat-box animated-up" data-target="25000">
+                    <i class="fas fa-users"></i>
+                    <div class="counter" data-target="25000">0</div>
+                    <h4>Satisfied Customers</h4>
+                </div>
+                <div class="stat-box animated-up" data-target="1500">
+                    <i class="fas fa-briefcase"></i>
+                    <div class="counter" data-target="1500">0</div>
+                    <h4>Businesses Served</h4>
+                </div>
+                <div class="stat-box animated-up" data-target="50">
+                    <i class="fas fa-flag"></i>
+                    <div class="counter" data-target="50">0</div>
+                    <h4>Countries Supported</h4>
+                </div>
+                <div class="stat-box animated-up" data-target="99">
+                    <i class="fas fa-percentage"></i>
+                    <div class="counter" data-target="99.9">0</div>
+                    <h4>Uptime Percentage</h4>
+                </div>
+            </div>
+
+        </section>
+<!--Contact details-->
+        <section id="contact" class="contact-section">
+            <div class="section-heading">
+                <h2>Ready to Transform Your Billing?</h2>
+            </div>
+            <div class="contact-container">
+                
+                <div class="contact-form animated-left">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="Phone Number" placeholder="Your Number" required>
+                        <textarea placeholder="Your Message / Query" rows="4" required></textarea>
+                        <button type="submit" class="btn-primary">Submit Inquiry</button>
+                    </form>
+                </div>
+
+                <div class="contact-info animated-right">
+                    <h3>Reach Us Directly</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 13/8, 1st Floor, Om Sakthi Complex, Vayalkarai Street, Karaikal - 609 602</p>
+                    <p><i class="fas fa-phone"></i> +91 99420 14611, 86101 45183</p>
+                    <p><i class="fas fa-envelope"></i> support@allbillgo.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61583804197703" class="facebook-icon"><i class="fab fa-facebook-f" style="color: white;"></i></a>
+                        <a href="https://www.instagram.com/accounts/login/" class="instagram-icon"><i class="fab fa-instagram"style="color: white;"></i></a>
+                        <a href="https://www.youtube.com/@AllBillGo" class="youtube-icon"><i class="fab fa-youtube" style="color: white;"></i></a>
+                        <a href="#" class="twitter-icon"><i class="fab fa-twitter" style="color: white;" ></i></a>
+                        <a href="#" class="linkedin-icon"><i class="fab fa-linkedin-in" style="color: white;" ></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col animated-up">
+                <h4>About Us</h4>
+                <p>We are a leading provider of cloud-based billing and invoicing solutions designed for effortless financial management.</p>
+            </div>
+            <div class="footer-col animated-up">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#services">Pricing</a>
+                <a href="#about">Careers</a>
+                <a href="#contact">FAQ</a>
+            </div>
+            <div class="footer-col animated-up">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+            <div class="footer-col animated-up">
+                <h4>Newsletter</h4>
+                <p>Stay updated with our latest features and offers.</p>
+                <input type="email" placeholder="Enter your email">
+                <button class="btn-subscribe">Subscribe</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Allbillgo Softwares. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="javascript.js"></script>
+ 
+</body>
+</html>
